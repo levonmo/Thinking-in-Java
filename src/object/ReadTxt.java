@@ -10,10 +10,8 @@ import java.util.ArrayList;
  * 启动main函数 体验效果
  */
 public class ReadTxt {
-	
 	private FileReader reader;
 	private BufferedReader bufferedReader;
-
 	/*
 	 * 将一个文件的路径名构造一个对象
 	 */
@@ -70,7 +68,7 @@ public class ReadTxt {
 		}
 	}
 
-	//将所有的员工的ID
+	//将所有的员工各自的ID查询出来
 	public ArrayList<Integer> findAllEmployee() throws IOException{
 		//这个数组是装员工的ID的
 		ArrayList<Integer> list = new ArrayList<Integer>();
@@ -87,14 +85,9 @@ public class ReadTxt {
 		}
 		return list;
 	}
-	
 	public static void main(String[] args) throws IOException {
 		ReadTxt readTxt = new ReadTxt("data.txt");
-		readTxt.bufferedReader.mark(100);
 		ArrayList<Integer> list = readTxt.findAllEmployee();
-		for (Integer i : list) {
-			readTxt.findSelfAndBranch(i);
-			readTxt.bufferedReader.reset();
-		}
+		System.out.println(list);
 	}
 }
