@@ -1,8 +1,11 @@
 README
 ===========================
 《Java编程思想》笔记
-看这本书的收获比较大，看的时候是在大二暑假，看了差不多两个月才看完，基本上一天只能看十多页，里面还穿插着一些设计模式，记得里面对选择对泛型的擦除等进行了激烈的讨论，看起来是比较有意思的。
-看书的大量笔记。  
+看这本书的收获比较大，看了差不多两个月才看完，基本上一天只能看十多页，里面还穿插着一些设计模式，记得里面对选择对泛型的擦除等进行了激烈的讨论，看起来是比较有意思的。
+下面有目录，可以直接点击超链接进去正文
+* 第一部分: https://github.com/mowenlong/Thinking-in-Java/blob/master/src/test/Test1.java
+* 第二部分: https://github.com/mowenlong/Thinking-in-Java/blob/master/src/test/Test2.java
+* 第三部分: https://github.com/mowenlong/Thinking-in-Java/blob/master/src/test/Test3.java
 
 **里面的笔记记得特别的详细!!!**
 **建议clone下来，一个个点进去看**
