@@ -1,4 +1,4 @@
-import object3.*;
+import code_list_three.*;
 
 public class 第十五章 {
     /*

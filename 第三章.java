@@ -1,7 +1,7 @@
-import object.Dog;
-import object.ObjectG;
-import object.PassObject;
-import object.Value;
+import code_list_one.Dog;
+import code_list_one.ObjectG;
+import code_list_one.PassObject;
+import code_list_one.Value;
 
 public class 第三章 {
 

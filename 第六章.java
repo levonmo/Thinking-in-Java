@@ -1,4 +1,4 @@
-import object.ConnectionManager;
+import code_list_one.ConnectionManager;
 
 public class 第六章 {
 
@@ -41,7 +41,7 @@ public class 第六章 {
      *		如果不希望其他人对该类拥有访问权限，可以将所有的构造器都指定为private，从而阻止任何人创建对象。
      *		可以在该类的static成员内部创建对象。例如：
      */
-    object.Lunch Lunch;//点进去
+    code_list_one.Lunch Lunch;//点进去
 
 
     /*

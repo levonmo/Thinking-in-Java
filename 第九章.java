@@ -1,4 +1,4 @@
-import object2.*;
+import code_list_two.*;
 import test.Factories;
 
 public class 第九章 {

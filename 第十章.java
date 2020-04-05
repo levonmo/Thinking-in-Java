@@ -1,5 +1,5 @@
-import object2.*;
-import object3.A3;
+import code_list_two.*;
+import code_list_three.A3;
 import test.Factories;
 
 public class 第十章 {

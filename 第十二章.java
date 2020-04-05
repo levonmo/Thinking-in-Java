@@ -1,4 +1,4 @@
-import object2.*;
+import code_list_two.*;
 
 public class 第十二章 {
     /*
