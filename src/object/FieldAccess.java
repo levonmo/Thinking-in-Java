@@ -1,36 +1,41 @@
 package object;
 
 public class FieldAccess {
-	public static void main(String[] args) {
-		
-		//µ½»ùÀàÒıÓÃÖ¸ÏòÒ»¸öµ¼³öÀà¶ÔÏó
-		Super su = new Sub();
-		System.out.println(su.field);//¶ÔÓÚÓò²¢Ã»ÓĞ¶àÌ¬
-		System.out.println(su.getField());//¶ÔÓÚ·½·¨¾Í´æÔÚ¶àÌ¬ÁË
-		
-		Sub sup = new Sub();
-		/*
-		 * ÆäÊµÔÚÕâÀïsup¶ÔÏó°üº¬ÁËÁ½¸ö³ÆÎªfieldµÄÓò£º×Ô¼ºÒ»¸ö£¬»ùÀàÒ»¸ö(ÔÚ´´½¨sup¶ÔÏóÊ±£¬ÒÑ¾­ÎªÆä´´½¨×Ó¶ÔÏóSuper£¬Ö»ÊÇÄãÃ»ÓĞ¿´¼û)
-		 * 	ÔÚÒıÓÃSubÖĞµÄfieldÓò²¢²»ÊÇSuperÖĞµÄ(ÊÇSupËü×Ô¼ºµÄ)£¬ÒªÏëµÈµ½SuperÖĞµÄfieldÓò£¬±ØĞëÏÔÊ½µÄÖ¸Ã÷super.field
-		 */
-		System.out.println(sup.field);
-		System.out.println(sup.getField());
-		System.out.println(sup.getSuperField());//ÕâÀïÊÇµ÷ÓÃ»ùÀàµÄÓò
-		
-	}
+    public static void main(String[] args) {
+
+        //åˆ°åŸºç±»å¼•ç”¨æŒ‡å‘ä¸€ä¸ªå¯¼å‡ºç±»å¯¹è±¡
+        Super su = new Sub();
+        System.out.println(su.field);//å¯¹äºåŸŸå¹¶æ²¡æœ‰å¤šæ€
+        System.out.println(su.getField());//å¯¹äºæ–¹æ³•å°±å­˜åœ¨å¤šæ€äº†
+
+        Sub sup = new Sub();
+        /*
+         * å…¶å®åœ¨è¿™é‡Œsupå¯¹è±¡åŒ…å«äº†ä¸¤ä¸ªç§°ä¸ºfieldçš„åŸŸï¼šè‡ªå·±ä¸€ä¸ªï¼ŒåŸºç±»ä¸€ä¸ª(åœ¨åˆ›å»ºsupå¯¹è±¡æ—¶ï¼Œå·²ç»ä¸ºå…¶åˆ›å»ºå­å¯¹è±¡Superï¼Œåªæ˜¯ä½ æ²¡æœ‰çœ‹è§)
+         * 	åœ¨å¼•ç”¨Subä¸­çš„fieldåŸŸå¹¶ä¸æ˜¯Superä¸­çš„(æ˜¯Supå®ƒè‡ªå·±çš„)ï¼Œè¦æƒ³ç­‰åˆ°Superä¸­çš„fieldåŸŸï¼Œå¿…é¡»æ˜¾å¼çš„æŒ‡æ˜super.field
+         */
+        System.out.println(sup.field);
+        System.out.println(sup.getField());
+        System.out.println(sup.getSuperField());//è¿™é‡Œæ˜¯è°ƒç”¨åŸºç±»çš„åŸŸ
+
+    }
 }
+
 class Super {
-	public int field = 0;
-	public int getField() {
-		return field;
-	}
+    public int field = 0;
+
+    public int getField() {
+        return field;
+    }
 }
+
 class Sub extends Super {
-	public int field = 1;
-	public int getField() {
-		return field;
-	}
-	public int getSuperField() {
-		return super.field;//µ÷ÓÃ»ùÀàµÄfieldÓò
-	}
+    public int field = 1;
+
+    public int getField() {
+        return field;
+    }
+
+    public int getSuperField() {
+        return super.field;//è°ƒç”¨åŸºç±»çš„fieldåŸŸ
+    }
 }

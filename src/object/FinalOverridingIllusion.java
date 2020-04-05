@@ -1,38 +1,44 @@
 package object;
 
 public class FinalOverridingIllusion {
-	public static void main(String[] args) {
-		OverridingPrivate2 op2 = new OverridingPrivate2();
-		op2.f();
-		op2.g();
-		OverridingPrivate op = op2;
-//		op.f();//µ÷ÓÃ²»ÁË
-	}
+    public static void main(String[] args) {
+        OverridingPrivate2 op2 = new OverridingPrivate2();
+        op2.f();
+        op2.g();
+        OverridingPrivate op = op2;
+//		op.f();//è°ƒç”¨ä¸äº†
+    }
 }
+
 class WithFinals {
-//	@Override//Èç¹ûÌí¼ÓÒ»¸öOverride×¢½â¾Í¿ÉÒÔ½â¾öÕâÖÖÎÊÌâ£¬OverrideÊÇÎªÁËÏëÒª¸²¸Ç»ùÀàµÄ·½·¨£¬µ«Èç¹ûÒòÎªÄ³ÖÖÒòËØ±ä³ÉÁËÖØĞÂ¶¨Òå£¬ÄÇÃ´±àÒëÆ÷¾Í»á²úÉúÒ»¸ö´íÎó
-	private final void f() {
-		System.out.println("WithFinals.f()");
-	}
-	private void g() {
-		System.out.println("WithFinals.g()");
-	}
+    //	@Override//å¦‚æœæ·»åŠ ä¸€ä¸ªOverrideæ³¨è§£å°±å¯ä»¥è§£å†³è¿™ç§é—®é¢˜ï¼ŒOverrideæ˜¯ä¸ºäº†æƒ³è¦è¦†ç›–åŸºç±»çš„æ–¹æ³•ï¼Œä½†å¦‚æœå› ä¸ºæŸç§å› ç´ å˜æˆäº†é‡æ–°å®šä¹‰ï¼Œé‚£ä¹ˆç¼–è¯‘å™¨å°±ä¼šäº§ç”Ÿä¸€ä¸ªé”™è¯¯
+    private final void f() {
+        System.out.println("WithFinals.f()");
+    }
+
+    private void g() {
+        System.out.println("WithFinals.g()");
+    }
 }
+
 class OverridingPrivate extends WithFinals {
-	//ÕâÀïÊÇ²úÉúÒ»¸öĞÂµÄ·½·¨£¬²¢²»ÊÇ¸²¸Ç»ùÀàµÄ·½·¨
-	private final void f() {
-		System.out.println("OverridingPrivate.f()");
-	}
-	//ÕâÀïÒ²ÊÇ£¬²úÉúÒ»¸öĞÂµÄ·½·¨£¬²¢²»¸²¸ÇÔ­À´µÄ·½·¨
-	private void g() {
-		System.out.println("OverridingPrivate.g()");
-	}
+    //è¿™é‡Œæ˜¯äº§ç”Ÿä¸€ä¸ªæ–°çš„æ–¹æ³•ï¼Œå¹¶ä¸æ˜¯è¦†ç›–åŸºç±»çš„æ–¹æ³•
+    private final void f() {
+        System.out.println("OverridingPrivate.f()");
+    }
+
+    //è¿™é‡Œä¹Ÿæ˜¯ï¼Œäº§ç”Ÿä¸€ä¸ªæ–°çš„æ–¹æ³•ï¼Œå¹¶ä¸è¦†ç›–åŸæ¥çš„æ–¹æ³•
+    private void g() {
+        System.out.println("OverridingPrivate.g()");
+    }
 }
+
 class OverridingPrivate2 extends OverridingPrivate {
-	public final void f() {
-		System.out.println("OverridingPrivate2.f()");
-	}
-	public void g() {
-		System.out.println("OverridingPrivate2.g()");
-	}
+    public final void f() {
+        System.out.println("OverridingPrivate2.f()");
+    }
+
+    public void g() {
+        System.out.println("OverridingPrivate2.g()");
+    }
 }

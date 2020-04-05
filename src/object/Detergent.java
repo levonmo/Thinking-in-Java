@@ -1,73 +1,82 @@
 package object;
 
-//¼Ì³Ğ
-class Cleanser{
-	
-	private String s = "Cleanser";
-	
-	public void append(String a){
-		s += a;
-	}
-	public void dilute(){
-		append("dilute()");
-	}
-	public void apply(){
-		append("apply()");
-	}
-	public void scrub(){
-		append("scrub()");
-	}
-	public String toString(){
-		return s;
-	}
-	public static void main(String[] args) {
-		Cleanser x = new Cleanser();		x.dilute();
-		x.apply();
-		x.scrub();
-		System.out.println(x);//Ä¬ÈÏµ÷ÓÃtoString·½·¨
-	}
+//ç»§æ‰¿
+class Cleanser {
+
+    private String s = "Cleanser";
+
+    public void append(String a) {
+        s += a;
+    }
+
+    public void dilute() {
+        append("dilute()");
+    }
+
+    public void apply() {
+        append("apply()");
+    }
+
+    public void scrub() {
+        append("scrub()");
+    }
+
+    public String toString() {
+        return s;
+    }
+
+    public static void main(String[] args) {
+        Cleanser x = new Cleanser();
+        x.dilute();
+        x.apply();
+        x.scrub();
+        System.out.println(x);//é»˜è®¤è°ƒç”¨toStringæ–¹æ³•
+    }
 }
 
-public class Detergent extends Cleanser{
+public class Detergent extends Cleanser {
 
-	//ÖØĞ´
-	public void scrub() {
-		append("Detergent.scrub()");
-		super.scrub();//µ÷ÓÃ¸¸ÀàµÄscrub·½·¨
-	}
-	//Ìí¼ÓÒ»¸öĞÂµÄ·½·¨
-	public void foam(){
-		append("foam()");
-	}
-	public static void main(String[] args) {
-		Detergent x = new Detergent();
-		x.dilute();
-		x.apply();
-		x.scrub();
-		x.foam();
-		System.out.println(x);//µ÷ÓÃÒ»¸ö¶ÔÏó£¬Ä¬ÈÏÊÇµ÷ÓÃËüµÄtoString·½·¨
-		Cleanser.main(args);//µ÷ÓÃÁíÒ»¸öÀàÖĞµÄmainº¯Êı  
-	}
-	
+    //é‡å†™
+    public void scrub() {
+        append("Detergent.scrub()");
+        super.scrub();//è°ƒç”¨çˆ¶ç±»çš„scrubæ–¹æ³•
+    }
+
+    //æ·»åŠ ä¸€ä¸ªæ–°çš„æ–¹æ³•
+    public void foam() {
+        append("foam()");
+    }
+
+    public static void main(String[] args) {
+        Detergent x = new Detergent();
+        x.dilute();
+        x.apply();
+        x.scrub();
+        x.foam();
+        System.out.println(x);//è°ƒç”¨ä¸€ä¸ªå¯¹è±¡ï¼Œé»˜è®¤æ˜¯è°ƒç”¨å®ƒçš„toStringæ–¹æ³•
+        Cleanser.main(args);//è°ƒç”¨å¦ä¸€ä¸ªç±»ä¸­çš„mainå‡½æ•°
+    }
+
 }
 
-//´ÓDetergentÀàÖĞ¼Ì³Ğ²úÉúÒ»¸öĞÂµÄÀà¡£¸²¸Çscrub()²¢Ìí¼ÓÒ»¸öÃûÎªsterilize()µÄĞÂ·½·¨
-class DetergentSon extends Detergent{
-	
-	//ÖØĞ´DetergentÀàµÄscrub()·½·¨
-	public void scrub() {
-		System.out.println("DetergentSon.scrub");
-	}
-	//Ìí¼ÓÒ»¸öĞÂµÄ·½·¨
-	public void sterilize(){
-		System.out.println("DetergentSon.sterilize");
-	}
-	
-	public static void main(String[] args) {
-		DetergentSon x = new DetergentSon(); 
-		x.scrub();//ÖØĞ´µÄ·½·¨
-		x.foam();//µ÷ÓÃ¸¸ÀàµÄ·½·¨
-		x.apply();//µ÷ÓÃ¸¸¸¸ÀàµÄ·½·¨
-		x.sterilize();//µ÷ÓÃ¸ÃÀàĞÂĞ´µÄ·½·¨
-	}
+//ä»Detergentç±»ä¸­ç»§æ‰¿äº§ç”Ÿä¸€ä¸ªæ–°çš„ç±»ã€‚è¦†ç›–scrub()å¹¶æ·»åŠ ä¸€ä¸ªåä¸ºsterilize()çš„æ–°æ–¹æ³•
+class DetergentSon extends Detergent {
+
+    //é‡å†™Detergentç±»çš„scrub()æ–¹æ³•
+    public void scrub() {
+        System.out.println("DetergentSon.scrub");
+    }
+
+    //æ·»åŠ ä¸€ä¸ªæ–°çš„æ–¹æ³•
+    public void sterilize() {
+        System.out.println("DetergentSon.sterilize");
+    }
+
+    public static void main(String[] args) {
+        DetergentSon x = new DetergentSon();
+        x.scrub();//é‡å†™çš„æ–¹æ³•
+        x.foam();//è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•
+        x.apply();//è°ƒç”¨çˆ¶çˆ¶ç±»çš„æ–¹æ³•
+        x.sterilize();//è°ƒç”¨è¯¥ç±»æ–°å†™çš„æ–¹æ³•
+    }
 }

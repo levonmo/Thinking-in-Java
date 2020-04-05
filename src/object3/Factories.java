@@ -2,31 +2,31 @@ package test;
 
 public class Factories {
 	public static void main(String[] args) {
-		//ÀûÓÃ¹¤³§Ä£Ê½£¬µ÷ÓÃ·½·¨¾Í¿ÉÒÔ·µ»ØÒ»¸ö¶ÔÏóÁË
+		//åˆ©ç”¨å·¥å‚æ¨¡å¼ï¼Œè°ƒç”¨æ–¹æ³•å°±å¯ä»¥è¿”å›ä¸€ä¸ªå¯¹è±¡äº†
 		ServiceFactory factory = ServiceImpl.factory();
 		Service service = factory.getService();
 		service.method1();
 		service.method2();
-		//µ÷ÓÃÁíÒ»¸ö¹¤³§£¬·µ»ØÁíÒ»ÖÖ¶ÔÏóÊµÀı
+		//è°ƒç”¨å¦ä¸€ä¸ªå·¥å‚ï¼Œè¿”å›å¦ä¸€ç§å¯¹è±¡å®ä¾‹
 		ServiceFactory factory2 = ServiceImpl.factory();
 		Service service2 = factory2.getService();
 		service2.method1();
 		service2.method2();
 	}
 }
-//½Ó¿Ú
+//æ¥å£
 interface Service {
 	void method1();
 	void method2();
 }
-//ÕâÊÇÒ»¸ö¹¤³§£¬µ÷ÓÃgetService·½·¨¿ÉÒÔ·µ»ØÒ»¸öÊµÀı
+//è¿™æ˜¯ä¸€ä¸ªå·¥å‚ï¼Œè°ƒç”¨getServiceæ–¹æ³•å¯ä»¥è¿”å›ä¸€ä¸ªå®ä¾‹
 interface ServiceFactory {
 	Service getService();
 }
 class ServiceImpl implements Service {
 	public void method1() {System.out.println("ServiceImpl.method1");}
 	public void method2() {System.out.println("ServiceImpl.method2");}
-	//µ÷ÓÃÕâ¸ö·½·¨¿ÉÒÔ»ñµÃÒ»¸ö¹¤³§
+	//è°ƒç”¨è¿™ä¸ªæ–¹æ³•å¯ä»¥è·å¾—ä¸€ä¸ªå·¥å‚
 	public static ServiceFactory factory() {
 		return new ServiceFactory() {
 			public Service getService() {

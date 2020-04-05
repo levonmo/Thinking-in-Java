@@ -4,61 +4,63 @@ import java.util.Arrays;
 import java.util.Random;
 
 class Val {
-	int i;
-	public Val(int i) {
-		this.i = i;
-	}
+    int i;
+
+    public Val(int i) {
+        this.i = i;
+    }
 }
 
 public class FinalData {
-	private static Random rand = new Random(47);
-	private String id;
-	public FinalData(String id) {
-		this.id = id;
-	}
-	
-	//»ù±¾ÀàĞÍ+final Ò»µ©Íê³É³õÊ¼»¯¾Í²»ÄÜ¸Ä±äµÄ£¬Ã¿¸ö¶ÔÏó¶¼ÓĞÒ»·İ£¬ÔÙ¶à+staticÊÇËùÓĞ¶ÔÏó¹²ÏíÒ»·İ²»¿É¸Ä±äµÄÊı¾İ
-	private final int valueOne = 9;
-	private static final int VALUE_TWO = 99;
-	public static final int VALUE_THREE = 39;
-	
-	//finalÓëfinal+staticµÄÇø±ğ£¬ÏÂÃæÓĞ£¬final+staticµÄ»ù±¾ÀàĞÍÈ«ÓÃ´óĞ´×ÖÄ¸ÃüÃû
-	private final int i4 = rand.nextInt(20);
-	static final int INT_5 = rand.nextInt(20);//ÕâÀï¼ÓÁËstatic
-	
-	//¶ÔÏóÀàĞÍ+final
-	private Val v1 = new Val(11);
-	private final Val v2 = new Val(2);
-	private static final Val v3 = new Val(13);
-	
-	//Êı×éÀàĞÍ+final£¬
-	private final int[] a = {1,2,3,4,5,6};
+    private static Random rand = new Random(47);
+    private String id;
 
-	public String toString() {
-		return id + ": " + "i4 = " + i4 + ", INT_5= " + INT_5;
-	}
-	
-	public static void main(String[] args) {
-		FinalData fd1 = new FinalData("fd1");
-		
-//		fd1.valueOne = 1;//final¶¨ÒåµÄÖµ²»ÄÜ±»¸Ä±ä
-		fd1.v2.i = 1;//²»ÊÇfianl¶¨ÒåµÄÖµ¿ÉÒÔ±»¸Ä±ä
-		
-//		fd1.v2 = new Val(7);//final+¶ÔÏóÀàĞÍ£¬Ò»µ©³õÊ¼»¯ÒıÓÃÖ¸ÏòÄ³¸ö¶ÔÏó£¬ÄÇÃ´¾Í²»ÄÜ¸Ä±äÕâ¸öÒıÓÃÖ¸Òıµ½ÆäËû¶ÔÏó
-		fd1.v1 = new Val(6);//²»ÊÇfinalµÄ£¬Ëæ±ã¸Ä±äÒıÓÃÖ¸Ïò
-		
-		for (int i : fd1.a) {
-			fd1.a[i] = 1;//Êı×éÔªËØµÄÊı¾İ¿ÉÒÔ¸Ä±ä
-//			fd1.a[i] = new Val(1);//µ«ÊÇ²»ÄÜ¸Ä±äÊı×éÔªËØµÄÒıÓÃÖ¸Ïò
-		}
-		
-		System.out.println(fd1);
-		FinalData fd2 = new FinalData("fd2");
-		System.out.println(fd2); 
-		/*
-		 * ´ÓÕâÀï¿ÉÒÔ¿´³ö
-		 * 	final+»ù±¾ÀàĞÍ: Ò»µ©Íê³É³õÊ¼»¯¾Í²»¿É¸Ä±ä£¬Ã¿¸ö¶ÔÏó¶¼ÓĞÒ»·İ
-		 * 	final+static+»ù±¾ÀàĞÍ£º²»¿É¸Ä±ä£¬Ö»ÓĞÒ»·İ(ËùÓĞ¶ÔÏó¹²ÏíÒ»·İ)
-		 */
-	}
+    public FinalData(String id) {
+        this.id = id;
+    }
+
+    //åŸºæœ¬ç±»å‹+final ä¸€æ—¦å®Œæˆåˆå§‹åŒ–å°±ä¸èƒ½æ”¹å˜çš„ï¼Œæ¯ä¸ªå¯¹è±¡éƒ½æœ‰ä¸€ä»½ï¼Œå†å¤š+staticæ˜¯æ‰€æœ‰å¯¹è±¡å…±äº«ä¸€ä»½ä¸å¯æ”¹å˜çš„æ•°æ®
+    private final int valueOne = 9;
+    private static final int VALUE_TWO = 99;
+    public static final int VALUE_THREE = 39;
+
+    //finalä¸final+staticçš„åŒºåˆ«ï¼Œä¸‹é¢æœ‰ï¼Œfinal+staticçš„åŸºæœ¬ç±»å‹å…¨ç”¨å¤§å†™å­—æ¯å‘½å
+    private final int i4 = rand.nextInt(20);
+    static final int INT_5 = rand.nextInt(20);//è¿™é‡ŒåŠ äº†static
+
+    //å¯¹è±¡ç±»å‹+final
+    private Val v1 = new Val(11);
+    private final Val v2 = new Val(2);
+    private static final Val v3 = new Val(13);
+
+    //æ•°ç»„ç±»å‹+finalï¼Œ
+    private final int[] a = {1, 2, 3, 4, 5, 6};
+
+    public String toString() {
+        return id + ": " + "i4 = " + i4 + ", INT_5= " + INT_5;
+    }
+
+    public static void main(String[] args) {
+        FinalData fd1 = new FinalData("fd1");
+
+//		fd1.valueOne = 1;//finalå®šä¹‰çš„å€¼ä¸èƒ½è¢«æ”¹å˜
+        fd1.v2.i = 1;//ä¸æ˜¯fianlå®šä¹‰çš„å€¼å¯ä»¥è¢«æ”¹å˜
+
+//		fd1.v2 = new Val(7);//final+å¯¹è±¡ç±»å‹ï¼Œä¸€æ—¦åˆå§‹åŒ–å¼•ç”¨æŒ‡å‘æŸä¸ªå¯¹è±¡ï¼Œé‚£ä¹ˆå°±ä¸èƒ½æ”¹å˜è¿™ä¸ªå¼•ç”¨æŒ‡å¼•åˆ°å…¶ä»–å¯¹è±¡
+        fd1.v1 = new Val(6);//ä¸æ˜¯finalçš„ï¼Œéšä¾¿æ”¹å˜å¼•ç”¨æŒ‡å‘
+
+        for (int i : fd1.a) {
+            fd1.a[i] = 1;//æ•°ç»„å…ƒç´ çš„æ•°æ®å¯ä»¥æ”¹å˜
+//			fd1.a[i] = new Val(1);//ä½†æ˜¯ä¸èƒ½æ”¹å˜æ•°ç»„å…ƒç´ çš„å¼•ç”¨æŒ‡å‘
+        }
+
+        System.out.println(fd1);
+        FinalData fd2 = new FinalData("fd2");
+        System.out.println(fd2);
+        /*
+         * ä»è¿™é‡Œå¯ä»¥çœ‹å‡º
+         * 	final+åŸºæœ¬ç±»å‹: ä¸€æ—¦å®Œæˆåˆå§‹åŒ–å°±ä¸å¯æ”¹å˜ï¼Œæ¯ä¸ªå¯¹è±¡éƒ½æœ‰ä¸€ä»½
+         * 	final+static+åŸºæœ¬ç±»å‹ï¼šä¸å¯æ”¹å˜ï¼Œåªæœ‰ä¸€ä»½(æ‰€æœ‰å¯¹è±¡å…±äº«ä¸€ä»½)
+         */
+    }
 }

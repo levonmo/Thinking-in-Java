@@ -1,35 +1,40 @@
 package object;
 
 public class Book {
-	boolean checkedOut = false;
-	public Book(boolean checkedOut) {
-		this.checkedOut = checkedOut;
-	}
-	//Ã¿±¾Êé¶¼ÒªÇ©Èë
-	public void checkIn(){
-		checkedOut = false;
-		System.out.println("Êé±»Ç©Èë");
-	}
-	//µ±½øĞĞÀ¬»ø»ØÊÕÇ°µ÷ÓÃÕâ¸ö·½·¨
-	protected void finalize()  {
-		//Èç¹ûÃ»ÓĞ±»Ç©Èë£¬checkedOut¾ÍÎªtrue£¬ÕâÊ±ºòµ±»ØÊÕ¸Ã¶ÔÏóµÄÊ±ºò¾Í»áÖ´ĞĞÏÂÃæµÄ´úÂë
-		if (checkedOut) {
-			System.out.println("ÊéÃ»ÓĞ±»Ç©Èë");
-		}
-	}
-	public boolean getCheckedOut(){
-		return checkedOut;
-	}
-	public static void main(String[] args) {
-		Book book = new Book(true);
-		book.checkIn();//½«ÊéÇ©Èë
-		new Book(true);
-		System.gc();//Ç¿ÖÆ½øĞĞÖÕ½á¶¯×÷(»ØÊÕ)£¬new³öÀ´µÄÊé»¹Ã»ÓĞ±»Ç©Èë
-		/*
-		 * ±¾ÀıµÄÖÕ½áÌõ¼şÊÇ:ËùÓĞµÄBook¶ÔÏóÔÚ±»À¬»ø»ØÊÕÇ°¶¼Ó¦¸Ã±»Ç©Èë¡£µ«ÔÚmain()·½·¨ÖĞ£¬ÓÉÓÚ³ÌĞòÔ±µÄ´íÎó£¬ÓĞÒ»±¾ÊéÎ´±»Ç©Èë¡£
-		 * 	ÒªÊÇÃ»ÓĞfinalize()·½·¨À´ÑéÖ¤ÖÕ½áÌõ¼ş£¬½«ºÜÄÑ·¢ÏÖÕâÖÖÈ±Ïİ¡£
-		 * ×¢Òâ:System.gc()ÓÃÓÚÇ¿ÖÆ½øĞĞÖÕ½á¶¯×÷¡£¼´Ê¹Ã»ÓĞÕâÑù×ö£¬Í¨¹ıÖØ¸´µÄÖ´ĞĞ³ÌĞò(¼ÙÉè³ÌĞò½«·ÖÅä´óÁ¿µÄ´æ´¢¿Õ¼ä¶øµ¼ÖÂÀ¬»ø»ØÊÕ¶¯×÷µÄÖ´ĞĞ£¬À¬»ø»ØÊÕÆ÷ÊÇµ±ÄÚ´æÂúÁË²Å½øĞĞÇåÀí¹¤×÷µÄ)£¬
-		 * 	×îÖÕÒ²»á½«Book¶ÔÏó»ØÊÕ(µ«ÊÇBook»¹ÓĞÒ»¸ö¶ÔÏóÃ»ÓĞ±»Ç©Èë)
-		 */
-	}
+    boolean checkedOut = false;
+
+    public Book(boolean checkedOut) {
+        this.checkedOut = checkedOut;
+    }
+
+    //æ¯æœ¬ä¹¦éƒ½è¦ç­¾å…¥
+    public void checkIn() {
+        checkedOut = false;
+        System.out.println("ä¹¦è¢«ç­¾å…¥");
+    }
+
+    //å½“è¿›è¡Œåƒåœ¾å›æ”¶å‰è°ƒç”¨è¿™ä¸ªæ–¹æ³•
+    protected void finalize() {
+        //å¦‚æœæ²¡æœ‰è¢«ç­¾å…¥ï¼ŒcheckedOutå°±ä¸ºtrueï¼Œè¿™æ—¶å€™å½“å›æ”¶è¯¥å¯¹è±¡çš„æ—¶å€™å°±ä¼šæ‰§è¡Œä¸‹é¢çš„ä»£ç 
+        if (checkedOut) {
+            System.out.println("ä¹¦æ²¡æœ‰è¢«ç­¾å…¥");
+        }
+    }
+
+    public boolean getCheckedOut() {
+        return checkedOut;
+    }
+
+    public static void main(String[] args) {
+        Book book = new Book(true);
+        book.checkIn();//å°†ä¹¦ç­¾å…¥
+        new Book(true);
+        System.gc();//å¼ºåˆ¶è¿›è¡Œç»ˆç»“åŠ¨ä½œ(å›æ”¶)ï¼Œnewå‡ºæ¥çš„ä¹¦è¿˜æ²¡æœ‰è¢«ç­¾å…¥
+        /*
+         * æœ¬ä¾‹çš„ç»ˆç»“æ¡ä»¶æ˜¯:æ‰€æœ‰çš„Bookå¯¹è±¡åœ¨è¢«åƒåœ¾å›æ”¶å‰éƒ½åº”è¯¥è¢«ç­¾å…¥ã€‚ä½†åœ¨main()æ–¹æ³•ä¸­ï¼Œç”±äºç¨‹åºå‘˜çš„é”™è¯¯ï¼Œæœ‰ä¸€æœ¬ä¹¦æœªè¢«ç­¾å…¥ã€‚
+         * 	è¦æ˜¯æ²¡æœ‰finalize()æ–¹æ³•æ¥éªŒè¯ç»ˆç»“æ¡ä»¶ï¼Œå°†å¾ˆéš¾å‘ç°è¿™ç§ç¼ºé™·ã€‚
+         * æ³¨æ„:System.gc()ç”¨äºå¼ºåˆ¶è¿›è¡Œç»ˆç»“åŠ¨ä½œã€‚å³ä½¿æ²¡æœ‰è¿™æ ·åšï¼Œé€šè¿‡é‡å¤çš„æ‰§è¡Œç¨‹åº(å‡è®¾ç¨‹åºå°†åˆ†é…å¤§é‡çš„å­˜å‚¨ç©ºé—´è€Œå¯¼è‡´åƒåœ¾å›æ”¶åŠ¨ä½œçš„æ‰§è¡Œï¼Œåƒåœ¾å›æ”¶å™¨æ˜¯å½“å†…å­˜æ»¡äº†æ‰è¿›è¡Œæ¸…ç†å·¥ä½œçš„)ï¼Œ
+         * 	æœ€ç»ˆä¹Ÿä¼šå°†Bookå¯¹è±¡å›æ”¶(ä½†æ˜¯Bookè¿˜æœ‰ä¸€ä¸ªå¯¹è±¡æ²¡æœ‰è¢«ç­¾å…¥)
+         */
+    }
 }

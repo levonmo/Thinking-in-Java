@@ -1,29 +1,30 @@
 package object;
 
-//³õÊ¼»¯»ùÀà
-public class Cartoon extends Drawing{
-	
-	public Cartoon() {
-		System.out.println("Cartoon¶ÔÏó´´½¨");
-	}
-	
-	public static void main(String[] args) {
-		Cartoon cartoon = new Cartoon();
-		/*
-		 * µ±´´½¨Ò»¸öCartoon¶ÔÏóÊ±£¬Ê×ÏÈ´´½¨Ò»¸ö×î¶¥²ãµÄ¸¸Àà£¬È»ºóÒ»¼¶¼¶ÍùÏÂ´´½¨»ùÀàµÄ×Ó¶ÔÏó
-		 * 	»ùÀàÔÚµ¼³öÀà¹¹ÔìÆ÷µ÷ÓÃÖ®Ç°¾ÍÒÑ¾­Íê³É³õÊ¼»¯ÁË
-		 */
-	}
-	
+//åˆå§‹åŒ–åŸºç±»
+public class Cartoon extends Drawing {
+
+    public Cartoon() {
+        System.out.println("Cartoonå¯¹è±¡åˆ›å»º");
+    }
+
+    public static void main(String[] args) {
+        Cartoon cartoon = new Cartoon();
+        /*
+         * å½“åˆ›å»ºä¸€ä¸ªCartoonå¯¹è±¡æ—¶ï¼Œé¦–å…ˆåˆ›å»ºä¸€ä¸ªæœ€é¡¶å±‚çš„çˆ¶ç±»ï¼Œç„¶åä¸€çº§çº§å¾€ä¸‹åˆ›å»ºåŸºç±»çš„å­å¯¹è±¡
+         * 	åŸºç±»åœ¨å¯¼å‡ºç±»æ„é€ å™¨è°ƒç”¨ä¹‹å‰å°±å·²ç»å®Œæˆåˆå§‹åŒ–äº†
+         */
+    }
+
 }
 
 class Art {
-	Art(){
-		System.out.println("Art¶ÔÏó´´½¨");
-	}
+    Art() {
+        System.out.println("Artå¯¹è±¡åˆ›å»º");
+    }
 }
+
 class Drawing extends Art {
-	Drawing() {
-		System.out.println("Drawing¶ÔÏó´´½¨");
-	}
+    Drawing() {
+        System.out.println("Drawingå¯¹è±¡åˆ›å»º");
+    }
 }

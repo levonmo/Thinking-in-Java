@@ -6,10 +6,12 @@ package object2;
  * 	·问题在于，那个指向外围类对象的"秘密"的引用必须被初始化。
  */
 public class InheritInner extends WithInner.Inner { //这里继承内部类
-	InheritInner(WithInner w) {  //
-		w.super();//使用super()语法
-	}
+    InheritInner(WithInner w) {  //
+        w.super();//使用super()语法
+    }
 }
+
 class WithInner {
-	class Inner {}
+    class Inner {
+    }
 }

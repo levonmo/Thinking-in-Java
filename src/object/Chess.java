@@ -1,32 +1,34 @@
 package object;
 
-//³õÊ¼»¯´øÓĞ²ÎÊıµÄ¹¹ÔìÆ÷
+//åˆå§‹åŒ–å¸¦æœ‰å‚æ•°çš„æ„é€ å™¨
 public class Chess extends BoardGame {
 
-	public Chess(int i) {
-		/*
-		 * ÒªÏëÊ¹ÓÃ´øÓĞ²ÎÊıµÄ¹¹ÔìÆ÷±ØĞë½«²ÎÊı Í¨¹ısuper´«µ½¸¸Àà
-		 */
-		super(i);
-		System.out.println("Chess¶ÔÏó´´½¨" + "i=" + i);
-	}
-	
-	public static void main(String[] args) {
-		Chess chess = new Chess(12);//Ö¸¶¨²ÎÊı´´½¨¶ÔÏó£¬·Ö±ğµ÷ÓÃÁËÈı¸ö´øÓĞ²ÎÊıµÄ¹¹ÔìÆ÷£¬´´½¨ÁËÁ½¸ö»ùÀàµÄ×Ó¶ÔÏó£¬Ò»¸öÍâ²¿¶ÔÏó¡£
-	}
+    public Chess(int i) {
+        /*
+         * è¦æƒ³ä½¿ç”¨å¸¦æœ‰å‚æ•°çš„æ„é€ å™¨å¿…é¡»å°†å‚æ•° é€šè¿‡superä¼ åˆ°çˆ¶ç±»
+         */
+        super(i);
+        System.out.println("Chesså¯¹è±¡åˆ›å»º" + "i=" + i);
+    }
+
+    public static void main(String[] args) {
+        Chess chess = new Chess(12);//æŒ‡å®šå‚æ•°åˆ›å»ºå¯¹è±¡ï¼Œåˆ†åˆ«è°ƒç”¨äº†ä¸‰ä¸ªå¸¦æœ‰å‚æ•°çš„æ„é€ å™¨ï¼Œåˆ›å»ºäº†ä¸¤ä¸ªåŸºç±»çš„å­å¯¹è±¡ï¼Œä¸€ä¸ªå¤–éƒ¨å¯¹è±¡ã€‚
+    }
 
 }
+
 class Game {
-	Game(int i) {
-		System.out.println("Game¶ÔÏó´´½¨" + "i=" + i);
-	}
+    Game(int i) {
+        System.out.println("Gameå¯¹è±¡åˆ›å»º" + "i=" + i);
+    }
 }
+
 class BoardGame extends Game {
 
-	BoardGame(int i) {
-		super(i);//µ÷ÓÃGame´øÓĞ²ÎÊıµÄ¹¹ÔìÆ÷
-		System.out.println("BoardGame¶ÔÏó´´½¨" + "i=" + i);
-	}
-	
+    BoardGame(int i) {
+        super(i);//è°ƒç”¨Gameå¸¦æœ‰å‚æ•°çš„æ„é€ å™¨
+        System.out.println("BoardGameå¯¹è±¡åˆ›å»º" + "i=" + i);
+    }
+
 }
 

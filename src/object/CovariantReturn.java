@@ -1,31 +1,43 @@
 package object;
 
 public class CovariantReturn {
-	public static void main(String[] args) {
-		
-		Mill m1 = new Mill();
-		Grain p1 = m1.process();
-		System.out.println(p1);//ÕâÀï¶¼ÊÇÕı³£µÄ
-		
-		Mill m2 = new WheatMill();
-		Grain p2 = m2.process();
-		System.out.println(p2);
-	}
+    public static void main(String[] args) {
+
+        Mill m1 = new Mill();
+        Grain p1 = m1.process();
+        System.out.println(p1);//è¿™é‡Œéƒ½æ˜¯æ­£å¸¸çš„
+
+        Mill m2 = new WheatMill();
+        Grain p2 = m2.process();
+        System.out.println(p2);
+    }
 }
+
 class Grain {
-	public String toString() {return "Grain";}
+    public String toString() {
+        return "Grain";
+    }
 }
+
 class Wheat extends Grain {
-	public String toString() {return "Wheat";}
+    public String toString() {
+        return "Wheat";
+    }
 }
+
 class Mill {
-	public Grain process() {return new Grain();}
+    public Grain process() {
+        return new Grain();
+    }
 }
+
 class WheatMill extends Mill {
-	/*
-	 * ÕâÀïÖØĞ´ÁËprocess·½·¨£¬·µ»ØÖµµÃÀàĞÍÊÇWheat£¬Óë»ùÀàÖĞ¸Ã·½·¨µÄ·µ»ØÖµÊÇ²»Ò»ÑùµÄ(»ùÀàµÄ·µ»ØÖµÀàĞÍÊÇGrain)¡£¾¡¹ÜWheatÊÇGrainµÄµ¼³öÀàÒ²²»¿ÉÒÔ
-	 * 	µ«ÊÇÔÚ5.0Ö®ºó£¬Ö»Òª¸²¸ÇµÄ·½·¨µÄ·µ»ØÖµÊÇÆä»ùÀàµÄµ¼³öÀà¾Í¿ÉÒÔÁË£¬¾Í¿ÉÒÔÊ¹ÓÃ¸ÃÀàĞÍÀ´½ÓÊÕ¡£
-	 * 	Ò»¾ä»°£º¸²¸ÇµÄ·½·¨·µ»ØÖµÀàĞÍ²»Ò»¶¨ÒªÓë»ùÀàµÄÒ»Ñù(ÊÇÆäµ¼³öÀàÒ²¿ÉÒÔ)
-	 */
-	public Wheat process() {return new Wheat();}
+    /*
+     * è¿™é‡Œé‡å†™äº†processæ–¹æ³•ï¼Œè¿”å›å€¼å¾—ç±»å‹æ˜¯Wheatï¼Œä¸åŸºç±»ä¸­è¯¥æ–¹æ³•çš„è¿”å›å€¼æ˜¯ä¸ä¸€æ ·çš„(åŸºç±»çš„è¿”å›å€¼ç±»å‹æ˜¯Grain)ã€‚å°½ç®¡Wheatæ˜¯Grainçš„å¯¼å‡ºç±»ä¹Ÿä¸å¯ä»¥
+     * 	ä½†æ˜¯åœ¨5.0ä¹‹åï¼Œåªè¦è¦†ç›–çš„æ–¹æ³•çš„è¿”å›å€¼æ˜¯å…¶åŸºç±»çš„å¯¼å‡ºç±»å°±å¯ä»¥äº†ï¼Œå°±å¯ä»¥ä½¿ç”¨è¯¥ç±»å‹æ¥æ¥æ”¶ã€‚
+     * 	ä¸€å¥è¯ï¼šè¦†ç›–çš„æ–¹æ³•è¿”å›å€¼ç±»å‹ä¸ä¸€å®šè¦ä¸åŸºç±»çš„ä¸€æ ·(æ˜¯å…¶å¯¼å‡ºç±»ä¹Ÿå¯ä»¥)
+     */
+    public Wheat process() {
+        return new Wheat();
+    }
 }

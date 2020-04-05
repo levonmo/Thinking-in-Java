@@ -1,5 +1,5 @@
 package object;
 
 public class Value {
-	public int i;
+    public int i;
 }

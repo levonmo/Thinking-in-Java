@@ -1,18 +1,19 @@
 package object;
 
-//½«DataOnlyµÄ´úÂëÕÒ³ö£¬Ğ´³ÉÒ»¸ö³ÌĞò£¬È»ºó±àÒë£¬ÔËĞĞ
+//å°†DataOnlyçš„ä»£ç æ‰¾å‡ºï¼Œå†™æˆä¸€ä¸ªç¨‹åºï¼Œç„¶åç¼–è¯‘ï¼Œè¿è¡Œ
 public class DataOnly {
-	int i;
-	double d;
-	boolean b;
-	public static void main(String[] args) {
-		DataOnly data = new DataOnly();
-		data.i = 47;
-		data.d = 1.1;
-		data.b = false;
-		//µÚÎå¸öÁ·Ï°£¬°ÑËü´òÓ¡³öÀ´
-		System.out.println(data.i);
-		System.out.println(data.d);
-		System.out.println(data.b);
-	}
+    int i;
+    double d;
+    boolean b;
+
+    public static void main(String[] args) {
+        DataOnly data = new DataOnly();
+        data.i = 47;
+        data.d = 1.1;
+        data.b = false;
+        //ç¬¬äº”ä¸ªç»ƒä¹ ï¼ŒæŠŠå®ƒæ‰“å°å‡ºæ¥
+        System.out.println(data.i);
+        System.out.println(data.d);
+        System.out.println(data.b);
+    }
 }

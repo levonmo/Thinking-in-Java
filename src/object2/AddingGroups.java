@@ -5,13 +5,13 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 
-//Arrays.asList()·½·¨½ÓÊÜÒ»¸öÊı×é»òÕßÊÇÒ»¸öÓÃ¶ººÅ·Ö¸ôµÄÔªËØÁĞ±í£¬²¢½«Æä×ª»¯ÎªÒ»¸öList¶ÔÏó
+//Arrays.asList()æ–¹æ³•æ¥å—ä¸€ä¸ªæ•°ç»„æˆ–è€…æ˜¯ä¸€ä¸ªç”¨é€—å·åˆ†éš”çš„å…ƒç´ åˆ—è¡¨ï¼Œå¹¶å°†å…¶è½¬åŒ–ä¸ºä¸€ä¸ªListå¯¹è±¡
 public class AddingGroups {
-	public static void main(String[] args) {
-		Collection<Integer> c = new ArrayList<Integer>(Arrays.asList(1,2,3));
-		//Ê¹ÓÃArrays.asList(),¿ÉÒÔ½«Ò»¸öCollection¼¯ºÏ»òÕßÊÇÓÃ¶ººÅ·Ö¸ôµÄ¶ÔÏó×ª»»ÎªCollection¶ÔÏó
+    public static void main(String[] args) {
+        Collection<Integer> c = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+        //ä½¿ç”¨Arrays.asList(),å¯ä»¥å°†ä¸€ä¸ªCollectioné›†åˆæˆ–è€…æ˜¯ç”¨é€—å·åˆ†éš”çš„å¯¹è±¡è½¬æ¢ä¸ºCollectionå¯¹è±¡
 
-		Collections.addAll(c,4,5,6);
-		//Collections.addAll·½·¨Ò²¿ÉÒÔ½«ÁíÒ»¸ö¼¯ºÏ»òÕßÊÇ¶ººÅ·Ö¸ôµÄ¡£×·¼Óµ½¸ø¶¨µÄ¼¯ºÏÉÏ(ÒªÔÚ¸Ã·½·¨µÄ²ÎÊıÀïÃæ´«ÈËÒ»¸ö¼¯ºÏ)
-	}
+        Collections.addAll(c, 4, 5, 6);
+        //Collections.addAllæ–¹æ³•ä¹Ÿå¯ä»¥å°†å¦ä¸€ä¸ªé›†åˆæˆ–è€…æ˜¯é€—å·åˆ†éš”çš„ã€‚è¿½åŠ åˆ°ç»™å®šçš„é›†åˆä¸Š(è¦åœ¨è¯¥æ–¹æ³•çš„å‚æ•°é‡Œé¢ä¼ äººä¸€ä¸ªé›†åˆ)
+    }
 }

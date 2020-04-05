@@ -2,23 +2,27 @@ package object;
 
 public class FinalArguments {
 
-	public void with(final Gizmo g) {
-		//ÎŞ·¨Íê³É¸³Öµ£¬ÒòÎª²ÎÊı¶¨ÒåÎªfinal£¬ÔòÔÊĞí¸Ã·½·¨¶ÁÈ¡²ÎÊıµÄĞÅÏ¢£¬¶øÎŞ·¨¸Ä±ä²ÎÊıµÄÒıÓÃ
-		//g = new Gizmo();
-	}
-	public void without(Gizmo g) {
-		g = new Gizmo();//¿ÉÒÔ¸Ä±ä²ÎÊıµÄĞÅÏ¢£¬Ëæ±ã¸Ä±ä²ÎÊıµÄÒıÓÃ¶ÔÏó
-	}
-	
-	public void f(final int i) {
-		//ÕâÀïÍ¬ÑùÊÇ²»ÄÜ¸ü¸Ä²ÎÊı´«ÈËµÄÖµ£¬Ö»ÊÇÔÊĞí¶ÁÈ¡²ÎÊıµÄĞÅÏ¢
-		//i = 1;
-	}
-	public void g(int i) {
-		i = 1;//Èç¹û²»ÊÇfinal£¬Ôò¿ÉÒÔ¸ü¸Ä²ÎÊı´«ÈëiµÄÖµ 
-	}
-	
+    public void with(final Gizmo g) {
+        //æ— æ³•å®Œæˆèµ‹å€¼ï¼Œå› ä¸ºå‚æ•°å®šä¹‰ä¸ºfinalï¼Œåˆ™å…è®¸è¯¥æ–¹æ³•è¯»å–å‚æ•°çš„ä¿¡æ¯ï¼Œè€Œæ— æ³•æ”¹å˜å‚æ•°çš„å¼•ç”¨
+        //g = new Gizmo();
+    }
+
+    public void without(Gizmo g) {
+        g = new Gizmo();//å¯ä»¥æ”¹å˜å‚æ•°çš„ä¿¡æ¯ï¼Œéšä¾¿æ”¹å˜å‚æ•°çš„å¼•ç”¨å¯¹è±¡
+    }
+
+    public void f(final int i) {
+        //è¿™é‡ŒåŒæ ·æ˜¯ä¸èƒ½æ›´æ”¹å‚æ•°ä¼ äººçš„å€¼ï¼Œåªæ˜¯å…è®¸è¯»å–å‚æ•°çš„ä¿¡æ¯
+        //i = 1;
+    }
+
+    public void g(int i) {
+        i = 1;//å¦‚æœä¸æ˜¯finalï¼Œåˆ™å¯ä»¥æ›´æ”¹å‚æ•°ä¼ å…¥içš„å€¼
+    }
+
 }
+
 class Gizmo {
-	public void spin() {}
+    public void spin() {
+    }
 }

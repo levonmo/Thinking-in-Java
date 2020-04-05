@@ -1,14 +1,15 @@
 package object;
 
 /*
- * ´´½¨Ò»¸öÀà£¬°üº¬Ò»¸öintÓòºÍÒ»¸öcharÓò£¬ËüÃÇ¶¼Ã»ÓĞ³õÊ¼»¯£¬½«ËûÃÇ´òÓ¡³öÀ´£¬ÒÔÑéÖ¤javaµÄÖ´ĞĞÁËÄ¬ÈÏµÄ³õÊ¼Öµ
+ * åˆ›å»ºä¸€ä¸ªç±»ï¼ŒåŒ…å«ä¸€ä¸ªintåŸŸå’Œä¸€ä¸ªcharåŸŸï¼Œå®ƒä»¬éƒ½æ²¡æœ‰åˆå§‹åŒ–ï¼Œå°†ä»–ä»¬æ‰“å°å‡ºæ¥ï¼Œä»¥éªŒè¯javaçš„æ‰§è¡Œäº†é»˜è®¤çš„åˆå§‹å€¼
  */
 public class ObjectB {
-	int i;
-	char a;
-	public static void main(String[] args) {
-		ObjectB objectB = new ObjectB();
-		System.out.println("»ù±¾ÀàĞÍintµÄÄ¬ÈÏÖµÊÇ" + objectB.i);
-		System.out.println("»ù±¾ÀàĞÍcharµÄÄ¬ÈÏÖµÊÇ" + objectB.a);
-	}
+    int i;
+    char a;
+
+    public static void main(String[] args) {
+        ObjectB objectB = new ObjectB();
+        System.out.println("åŸºæœ¬ç±»å‹intçš„é»˜è®¤å€¼æ˜¯" + objectB.i);
+        System.out.println("åŸºæœ¬ç±»å‹charçš„é»˜è®¤å€¼æ˜¯" + objectB.a);
+    }
 }

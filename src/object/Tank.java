@@ -1,5 +1,5 @@
 package object;
 
 public class Tank {
-	int level;
+    int level;
 }

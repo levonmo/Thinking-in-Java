@@ -4,6 +4,12 @@ package object2;
 public interface ObjectD extends ObjectDA, ObjectDB {
 
 }
-interface ObjectDA extends ObjectDC {}
-interface ObjectDB extends ObjectDC {}
-interface ObjectDC {}
+
+interface ObjectDA extends ObjectDC {
+}
+
+interface ObjectDB extends ObjectDC {
+}
+
+interface ObjectDC {
+}

@@ -2,16 +2,16 @@ package object;
 
 public class BlankFinal {
 
-	private final int i = 0;//ÕâÀïÔÚÓòµÄ¶¨Òå´¦¸³Öµ
-	private final int j;//¿ÉÒÔÏÈ²»ÓÃ¸³Öµ£¬µ«ÊÇ±ØĞëÒªÔÚ  ¹¹ÔìÖĞ  ÖĞ½øĞĞ¸³Öµ
-	
-	public BlankFinal(int j) {
-		this.j = j;//ÕâÀï¾Í¶ÔfinalµÄÓò¸³Öµ
-	}
-	
-	public static void main(String[] args) {
-		BlankFinal blankFinal = new BlankFinal(1);//¿ÉÒÔÔÚÊ¹ÓÃÇ°½øĞĞ¸³Öµ£¬Ìá¹©ÁËºÜ´óµÄÁé»îĞÔ
-//		blankFinal.j = 1;//Í¬ÑùÒ²ÊÇ²»¿É±äµÄ
-	}
-	
+    private final int i = 0;//è¿™é‡Œåœ¨åŸŸçš„å®šä¹‰å¤„èµ‹å€¼
+    private final int j;//å¯ä»¥å…ˆä¸ç”¨èµ‹å€¼ï¼Œä½†æ˜¯å¿…é¡»è¦åœ¨  æ„é€ ä¸­  ä¸­è¿›è¡Œèµ‹å€¼
+
+    public BlankFinal(int j) {
+        this.j = j;//è¿™é‡Œå°±å¯¹finalçš„åŸŸèµ‹å€¼
+    }
+
+    public static void main(String[] args) {
+        BlankFinal blankFinal = new BlankFinal(1);//å¯ä»¥åœ¨ä½¿ç”¨å‰è¿›è¡Œèµ‹å€¼ï¼Œæä¾›äº†å¾ˆå¤§çš„çµæ´»æ€§
+//		blankFinal.j = 1;//åŒæ ·ä¹Ÿæ˜¯ä¸å¯å˜çš„
+    }
+
 }

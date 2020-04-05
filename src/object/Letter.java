@@ -1,5 +1,5 @@
 package object;
 
 public class Letter {
-	char c;
+    char c;
 }

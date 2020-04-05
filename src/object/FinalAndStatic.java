@@ -2,28 +2,29 @@ package object;
 
 public class FinalAndStatic {
 
-	private final Obj a = new Obj();//Ê¹ÓÃfinal¹Ø¼ü×Ö£¬ÔÚ¶¨Òå±äÁ¿µÄÊ±ºò±ØĞë¶ÔÆä½øĞĞ¸³Öµ£¬¸³Öµºó¾Í²»ÄÜ¸Ä±ä(ÊÇÖ¸±äÁ¿µÄÒıÓÃ²»ÄÜ¸Ä±ä£¬¶ÔÏóÄÚÈİ¿ÉÒÔ¸Ä±ä)£¬Ã¿¸ö¶ÔÏóÓµÓĞ¶ÀÒ»ÎŞ¶şµÄÒ»·İ
-	
-	private static final Obj b = new Obj();//ËùÓĞ¶ÔÏó¹²ÏíÒ»·İ£¬Íê³É¸³Öµ²»ÄÜ¸Ä±ä£¬Ö»Õ¼Ò»·İÄÚ´æ
-	
-	public static void main(String[] args) {
-		//´´½¨Á½¸ö¶ÔÏó
-		FinalAndStatic fas1 = new FinalAndStatic();
-		FinalAndStatic fas2 = new FinalAndStatic();
-		//finalµÄhashCode
-		System.out.println(fas1.a.hashCode());
-		System.out.println(fas2.a.hashCode());
-		/*
-		 * fianl+staticµÄhashCode
-		 * ¾ÍËãÊÇfinal£¬Á½¸ö¶ÔÏóµÄaµÄÖµ¶¼ÊÇ²»Ò»ÑùµÄ£¬Ã¿¸ö¶ÔÏó¶¼¶ÀÏíÒ»·İ
-		 */
-		System.out.println(fas1.b.hashCode());
-		System.out.println(fas2.b.hashCode());
-		/*
-		 * final+static£ºËùÓĞ¶ÔÏó¹²ÏíÒ»·İ£¬hashCode¶¼ÊÇÒ»ÑùµÄ
-		 */
-	}
+    private final Obj a = new Obj();//ä½¿ç”¨finalå…³é”®å­—ï¼Œåœ¨å®šä¹‰å˜é‡çš„æ—¶å€™å¿…é¡»å¯¹å…¶è¿›è¡Œèµ‹å€¼ï¼Œèµ‹å€¼åå°±ä¸èƒ½æ”¹å˜(æ˜¯æŒ‡å˜é‡çš„å¼•ç”¨ä¸èƒ½æ”¹å˜ï¼Œå¯¹è±¡å†…å®¹å¯ä»¥æ”¹å˜)ï¼Œæ¯ä¸ªå¯¹è±¡æ‹¥æœ‰ç‹¬ä¸€æ— äºŒçš„ä¸€ä»½
+
+    private static final Obj b = new Obj();//æ‰€æœ‰å¯¹è±¡å…±äº«ä¸€ä»½ï¼Œå®Œæˆèµ‹å€¼ä¸èƒ½æ”¹å˜ï¼Œåªå ä¸€ä»½å†…å­˜
+
+    public static void main(String[] args) {
+        //åˆ›å»ºä¸¤ä¸ªå¯¹è±¡
+        FinalAndStatic fas1 = new FinalAndStatic();
+        FinalAndStatic fas2 = new FinalAndStatic();
+        //finalçš„hashCode
+        System.out.println(fas1.a.hashCode());
+        System.out.println(fas2.a.hashCode());
+        /*
+         * fianl+staticçš„hashCode
+         * å°±ç®—æ˜¯finalï¼Œä¸¤ä¸ªå¯¹è±¡çš„açš„å€¼éƒ½æ˜¯ä¸ä¸€æ ·çš„ï¼Œæ¯ä¸ªå¯¹è±¡éƒ½ç‹¬äº«ä¸€ä»½
+         */
+        System.out.println(fas1.b.hashCode());
+        System.out.println(fas2.b.hashCode());
+        /*
+         * final+staticï¼šæ‰€æœ‰å¯¹è±¡å…±äº«ä¸€ä»½ï¼ŒhashCodeéƒ½æ˜¯ä¸€æ ·çš„
+         */
+    }
 }
+
 class Obj {
-	
+
 }

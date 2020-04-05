@@ -1,15 +1,15 @@
 package object;
 
 public class EmptyFinal {
-	
-	private final Objc objc;//Õâ¾ÍÊÇ¿Õ°×µÄfinal±äÁ¿£¬µ«ÊÇÔÚÊ¹ÓÃÇ°±ØĞëÍê³É¸³Öµ£¬Ö»ÓĞÒ»ÖÖ·½·¨(¾ÍÊÇÔÚ¹¹ÔìÆ÷ÖĞ½øĞĞ¸³Öµ³õÊ¼»¯)
-	
-	public EmptyFinal(Objc objc) {
-		this.objc = objc;//ÔÚ¹¹ÔìÆ÷ÖĞ¶Ôfinal½øĞĞ¸³Öµ
-	}
-	
-	public static void main(String[] args) {
-		EmptyFinal emptyFinal = new EmptyFinal(new Objc());//ÔÚnew³öÀ´µÄÊ±ºò´«µİÒ»¸ö¶ÔÏó½øÈ¥£¬Íê³É¶ÔfinalÓòµÄ³õÊ¼»¯
-	}
-	
+
+    private final Objc objc;//è¿™å°±æ˜¯ç©ºç™½çš„finalå˜é‡ï¼Œä½†æ˜¯åœ¨ä½¿ç”¨å‰å¿…é¡»å®Œæˆèµ‹å€¼ï¼Œåªæœ‰ä¸€ç§æ–¹æ³•(å°±æ˜¯åœ¨æ„é€ å™¨ä¸­è¿›è¡Œèµ‹å€¼åˆå§‹åŒ–)
+
+    public EmptyFinal(Objc objc) {
+        this.objc = objc;//åœ¨æ„é€ å™¨ä¸­å¯¹finalè¿›è¡Œèµ‹å€¼
+    }
+
+    public static void main(String[] args) {
+        EmptyFinal emptyFinal = new EmptyFinal(new Objc());//åœ¨newå‡ºæ¥çš„æ—¶å€™ä¼ é€’ä¸€ä¸ªå¯¹è±¡è¿›å»ï¼Œå®Œæˆå¯¹finalåŸŸçš„åˆå§‹åŒ–
+    }
+
 }

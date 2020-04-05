@@ -1,94 +1,112 @@
 package object;
 
-public class Frog1 extends Amphibian1 {//2.Ñ°ÕÒ¸ÃÀàÊÇ·ñÓĞ»ùÀà(Í¨¹ıextends¹Ø¼ü×Ö¿ÉÒÔÖªµÀ)£¬ÒÀ´ÎÀàÍÆ£¬×îºóµ½¸ù»ùÀà
-	private Charateristic p = new Charateristic("a3");
-	private Description d = new Description("b3");
-	public Frog1() {
-		System.out.println("Frog1");
-	}
-	protected void dispose() {
-		System.out.println("Frog1.dispose");
-		d.dispose();
-		p.dispose();
-		super.dispose();
-	}
-	public static void main(String[] args) {//1.Ê×ÏÈ¼ÓÔØmain·½·¨(Ò»¸östatic·½·¨)
-		//  6.Í¬ÑùµÄ·½·¨Frog1±»ÊµÀı»¯
-		Frog1 frog1 = new Frog1();
-		System.out.println("Bye!");
-		frog1.dispose();
-		/*
-		 * 7. µ÷ÓÃdispose·½·¨
-		 * 	ÕâÀï¸ÕºÃÓëÇ°ÃæµÄÏà·´£¬ÏÈÖ´ĞĞµ¼³öÀàµÄdispose·½·¨£¬ÔÚÒÀ´ÎÖ´ĞĞµ½¸ù»ùÀàµÄdispose·½·¨£¬´ÓÊä³öµÄ½á¹ûÀ´¿´£¬Frog1¶ÔÏóµÄËùÓĞ²¿·Ö¶¼ÊÇ°´ÕÕ´´½¨µÄÄæĞò½øĞĞÏú»Ù
-		 */
-	}
+public class Frog1 extends Amphibian1 {//2.å¯»æ‰¾è¯¥ç±»æ˜¯å¦æœ‰åŸºç±»(é€šè¿‡extendså…³é”®å­—å¯ä»¥çŸ¥é“)ï¼Œä¾æ¬¡ç±»æ¨ï¼Œæœ€ååˆ°æ ¹åŸºç±»
+    private Charateristic p = new Charateristic("a3");
+    private Description d = new Description("b3");
+
+    public Frog1() {
+        System.out.println("Frog1");
+    }
+
+    protected void dispose() {
+        System.out.println("Frog1.dispose");
+        d.dispose();
+        p.dispose();
+        super.dispose();
+    }
+
+    public static void main(String[] args) {//1.é¦–å…ˆåŠ è½½mainæ–¹æ³•(ä¸€ä¸ªstaticæ–¹æ³•)
+        //  6.åŒæ ·çš„æ–¹æ³•Frog1è¢«å®ä¾‹åŒ–
+        Frog1 frog1 = new Frog1();
+        System.out.println("Bye!");
+        frog1.dispose();
+        /*
+         * 7. è°ƒç”¨disposeæ–¹æ³•
+         * 	è¿™é‡Œåˆšå¥½ä¸å‰é¢çš„ç›¸åï¼Œå…ˆæ‰§è¡Œå¯¼å‡ºç±»çš„disposeæ–¹æ³•ï¼Œåœ¨ä¾æ¬¡æ‰§è¡Œåˆ°æ ¹åŸºç±»çš„disposeæ–¹æ³•ï¼Œä»è¾“å‡ºçš„ç»“æœæ¥çœ‹ï¼ŒFrog1å¯¹è±¡çš„æ‰€æœ‰éƒ¨åˆ†éƒ½æ˜¯æŒ‰ç…§åˆ›å»ºçš„é€†åºè¿›è¡Œé”€æ¯
+         */
+    }
 }
+
 class Charateristic {
-	private String s;
-	public Charateristic(String s) {
-		this.s = s;
-		System.out.println("Charateristic¹¹ÔìÆ÷");
-	}
-	protected void dispose() {
-		System.out.println("Charateristic.dispose");
-	}
+    private String s;
+
+    public Charateristic(String s) {
+        this.s = s;
+        System.out.println("Charateristicæ„é€ å™¨");
+    }
+
+    protected void dispose() {
+        System.out.println("Charateristic.dispose");
+    }
 }
+
 class Description {
-	private String s;
-	public Description(String s) {
-		this.s = s;
-		System.out.println("Description¹¹ÔìÆ÷");
-	}
-	protected void dispose() {
-		System.out.println("Description.dispose");
-	}
+    private String s;
+
+    public Description(String s) {
+        this.s = s;
+        System.out.println("Descriptionæ„é€ å™¨");
+    }
+
+    protected void dispose() {
+        System.out.println("Description.dispose");
+    }
 }
+
 class LivingCreature {
-	/*
-	 * 3.ÕâÀïÊÇ¸ù»ùÀà£¬Ê×ÏÈÊÇ´´½¨¸ÃÀàµÄ¶ÔÏó¡£ÏÈ³õÊ¼»¯Óò(³ÉÔ±±äÁ¿)£¬CharateristicºÍDescription¶ÔÏó¶¼±»´´½¨(¸÷×ÔµÄ¹¹ÔìÆ÷±»µ÷ÓÃ)£¬
-	 *   ³ÉÔ±±äÁ¿ÊµÀı»¯µÄË³ĞòÊÇ°´ÕÕÄã±àĞ´µÄË³Ğò¡£È»ºóÔÙµ÷ÓÃLivingCreatureµÄ¹¹ÔìÆ÷£¬LivingCreature¶ÔÏó±»´´½¨¡£ÒÀ´ÎÀàÍÆ£¬Í¬ÑùµÄ·½·¨´´½¨ÏÂÒ»¸öµ¼³öÀà
-	 * 	
-	 */
-	private Charateristic p = new Charateristic("a");
-	private Description d = new Description("b");
-	public LivingCreature() {
-		System.out.println("LivingCreature¹¹ÔìÆ÷");
-	}
-	protected void dispose() {
-		System.out.println("LivingCreature.dispose");
-		d.dispose();
-		p.dispose();
-	}
+    /*
+     * 3.è¿™é‡Œæ˜¯æ ¹åŸºç±»ï¼Œé¦–å…ˆæ˜¯åˆ›å»ºè¯¥ç±»çš„å¯¹è±¡ã€‚å…ˆåˆå§‹åŒ–åŸŸ(æˆå‘˜å˜é‡)ï¼ŒCharateristicå’ŒDescriptionå¯¹è±¡éƒ½è¢«åˆ›å»º(å„è‡ªçš„æ„é€ å™¨è¢«è°ƒç”¨)ï¼Œ
+     *   æˆå‘˜å˜é‡å®ä¾‹åŒ–çš„é¡ºåºæ˜¯æŒ‰ç…§ä½ ç¼–å†™çš„é¡ºåºã€‚ç„¶åå†è°ƒç”¨LivingCreatureçš„æ„é€ å™¨ï¼ŒLivingCreatureå¯¹è±¡è¢«åˆ›å»ºã€‚ä¾æ¬¡ç±»æ¨ï¼ŒåŒæ ·çš„æ–¹æ³•åˆ›å»ºä¸‹ä¸€ä¸ªå¯¼å‡ºç±»
+     *
+     */
+    private Charateristic p = new Charateristic("a");
+    private Description d = new Description("b");
+
+    public LivingCreature() {
+        System.out.println("LivingCreatureæ„é€ å™¨");
+    }
+
+    protected void dispose() {
+        System.out.println("LivingCreature.dispose");
+        d.dispose();
+        p.dispose();
+    }
 }
+
 class Animal extends LivingCreature {
-	/*
-	 * 4.ÉÏÃæÒÑ¾­´´½¨ÁË»ùÀàLivingCreatureµÄ¶ÔÏó£¬¾ÍÓĞÁË´´½¨¸Ã¶ÔÏóµÄÌõ¼şÁË¡£ÏÈ³õÊ¼»¯³ÉÔ±±äÁ¿(¹¹ÔìÆ÷±»µ÷ÓÃ)£¬³ÉÔ±³õÊ¼»¯Íê£¬´´½¨¸Ã¶ÔÏó
-	 */
-	private Charateristic p = new Charateristic("a1");
-	private Description d = new Description("b1");
-	public Animal() {
-		System.out.println("Animal");
-	}
-	protected void dispose() {
-		System.out.println("Animal.dispose");
-		d.dispose();
-		p.dispose();
-		super.dispose();
-	}
+    /*
+     * 4.ä¸Šé¢å·²ç»åˆ›å»ºäº†åŸºç±»LivingCreatureçš„å¯¹è±¡ï¼Œå°±æœ‰äº†åˆ›å»ºè¯¥å¯¹è±¡çš„æ¡ä»¶äº†ã€‚å…ˆåˆå§‹åŒ–æˆå‘˜å˜é‡(æ„é€ å™¨è¢«è°ƒç”¨)ï¼Œæˆå‘˜åˆå§‹åŒ–å®Œï¼Œåˆ›å»ºè¯¥å¯¹è±¡
+     */
+    private Charateristic p = new Charateristic("a1");
+    private Description d = new Description("b1");
+
+    public Animal() {
+        System.out.println("Animal");
+    }
+
+    protected void dispose() {
+        System.out.println("Animal.dispose");
+        d.dispose();
+        p.dispose();
+        super.dispose();
+    }
 }
+
 class Amphibian1 extends Animal {
-	/*
-	 * 5.Í¬ÑùµÄ·½·¨´´½¨¸Ã¶ÔÏó
-	 */
-	private Charateristic p = new Charateristic("a2");
-	private Description d = new Description("b2");
-	public Amphibian1() {
-		System.out.println("Amphibian1");
-	}
-	protected void dispose() {
-		System.out.println("Amphibian1.dispose");
-		d.dispose();
-		p.dispose();
-		super.dispose();
-	}
+    /*
+     * 5.åŒæ ·çš„æ–¹æ³•åˆ›å»ºè¯¥å¯¹è±¡
+     */
+    private Charateristic p = new Charateristic("a2");
+    private Description d = new Description("b2");
+
+    public Amphibian1() {
+        System.out.println("Amphibian1");
+    }
+
+    protected void dispose() {
+        System.out.println("Amphibian1.dispose");
+        d.dispose();
+        p.dispose();
+        super.dispose();
+    }
 }

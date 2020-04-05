@@ -1,10 +1,10 @@
 package object3;
 
-//Èç¹ûÖ¸¶¨Holder3¿ÉÒÔ³ÖÓĞÄ³¸ö»ùÀàÀàĞÍ£¬ÄÇÃ´ËüÒ²ÄÜ³ÖÓĞµ¼³öÀà
+//å¦‚æœæŒ‡å®šHolder3å¯ä»¥æŒæœ‰æŸä¸ªåŸºç±»ç±»å‹ï¼Œé‚£ä¹ˆå®ƒä¹Ÿèƒ½æŒæœ‰å¯¼å‡ºç±»
 public class ObjectA {
 	public static void main(String[] args) {
-		Holder3<Automobile> h3 = new Holder3<Automobile>(new Automobile());//h3³ÖÓĞµÄÊÇAutomobileÀàĞÍ
-		h3.set(new Automobile2());//Ò²¿ÉÒÔ³ÖÓĞËüµÄµ¼³öÀàAutomobile2
+		Holder3<Automobile> h3 = new Holder3<Automobile>(new Automobile());//h3æŒæœ‰çš„æ˜¯Automobileç±»å‹
+		h3.set(new Automobile2());//ä¹Ÿå¯ä»¥æŒæœ‰å®ƒçš„å¯¼å‡ºç±»Automobile2
 	}
 }
 class Automobile2 extends Automobile {}

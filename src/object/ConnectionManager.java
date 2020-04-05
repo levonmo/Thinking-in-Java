@@ -3,33 +3,33 @@ package object;
 import java.sql.Connection;
 
 /*
- * ¿Í»§¶Ë²»ÄÜÖ±½Ó´´½¨Connection¶ÔÏó£¬Ö»ÄÜÍ¨¹ıConnectionManagerÀàÖĞÒ»¸östatic·½·¨À´»ñÈ¡ËüÃÇ£¬
- *	µ±ConnectionManagerÀàÖĞÃ»ÓĞ¶ÔÏóµÄÊ±ºò£¬Ëü¾Í»á·µ»ØÒ»¸önull
+ * å®¢æˆ·ç«¯ä¸èƒ½ç›´æ¥åˆ›å»ºConnectionå¯¹è±¡ï¼Œåªèƒ½é€šè¿‡ConnectionManagerç±»ä¸­ä¸€ä¸ªstaticæ–¹æ³•æ¥è·å–å®ƒä»¬ï¼Œ
+ *	å½“ConnectionManagerç±»ä¸­æ²¡æœ‰å¯¹è±¡çš„æ—¶å€™ï¼Œå®ƒå°±ä¼šè¿”å›ä¸€ä¸ªnull
  */
 public class ConnectionManager {
-	
-	private static Connection[] conn;
-	
-	private ConnectionManager(){
-		conn = new Connection[2];
-	}
-	
-	public static ConnectionManager createObject(){//µ÷ÓÃ¸Ã·½·¨´´½¨Ò»¸ö¶ÔÏó¸ø·½·¨µÄµ÷ÓÃÕß
-		return new ConnectionManager();
-	}
-	
-	public static Connection[] createConnection(){
-		return conn;//
-	}
 
-	public static void main(String[] args) {
-		Connection[] conn = ConnectionManager.createConnection();//´´½¨Ò»¸öConnectionÊı×é¶ÔÏó
-		System.out.println(conn);//ÓÉÓÚÃ»ÓĞµ÷ÓÃ¹¹ÔìÆ÷½øĞĞ³õÊ¼»¯£¬ËùÒÔ·µ»ØµÄÊÇÒ»¸ö¿ÕÒıÓÃ
-		//µ÷ÓÃstaticµ÷ÓÃÄÚ²¿µÄ¹¹Ôì·½·¨½øĞĞ³õÊ¼»¯£¬Êı×éµÈµ½³õÊ¼»¯
-		ConnectionManager.createObject();
-		Connection[] conn2 = ConnectionManager.createConnection();
-		//Êı×é¶ÔÏó±»ÄÚ²¿µÄ¹¹ÔìÆ÷³õÊ¼»¯£¬Êı×é¶ÔÏó²»ÔÙÊÇnull
-		System.out.println(conn2);
-	}
+    private static Connection[] conn;
+
+    private ConnectionManager() {
+        conn = new Connection[2];
+    }
+
+    public static ConnectionManager createObject() {//è°ƒç”¨è¯¥æ–¹æ³•åˆ›å»ºä¸€ä¸ªå¯¹è±¡ç»™æ–¹æ³•çš„è°ƒç”¨è€…
+        return new ConnectionManager();
+    }
+
+    public static Connection[] createConnection() {
+        return conn;//
+    }
+
+    public static void main(String[] args) {
+        Connection[] conn = ConnectionManager.createConnection();//åˆ›å»ºä¸€ä¸ªConnectionæ•°ç»„å¯¹è±¡
+        System.out.println(conn);//ç”±äºæ²¡æœ‰è°ƒç”¨æ„é€ å™¨è¿›è¡Œåˆå§‹åŒ–ï¼Œæ‰€ä»¥è¿”å›çš„æ˜¯ä¸€ä¸ªç©ºå¼•ç”¨
+        //è°ƒç”¨staticè°ƒç”¨å†…éƒ¨çš„æ„é€ æ–¹æ³•è¿›è¡Œåˆå§‹åŒ–ï¼Œæ•°ç»„ç­‰åˆ°åˆå§‹åŒ–
+        ConnectionManager.createObject();
+        Connection[] conn2 = ConnectionManager.createConnection();
+        //æ•°ç»„å¯¹è±¡è¢«å†…éƒ¨çš„æ„é€ å™¨åˆå§‹åŒ–ï¼Œæ•°ç»„å¯¹è±¡ä¸å†æ˜¯null
+        System.out.println(conn2);
+    }
 
 }

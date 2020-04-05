@@ -2,11 +2,15 @@ package object;
 
 import object2.A1;
 
-//ÔÚµÚ¶ş¸ö°üÖĞ´´½¨Ò»¸öprotectedµÄÄÚ²¿Àà£¬ÊµÏÖ¸Õ¸ÕÄÇ¸ö½Ó¿Ú
+//åœ¨ç¬¬äºŒä¸ªåŒ…ä¸­åˆ›å»ºä¸€ä¸ªprotectedçš„å†…éƒ¨ç±»ï¼Œå®ç°åˆšåˆšé‚£ä¸ªæ¥å£
 public class A2 {
-	protected class A2Inner implements A1 {
-		public A2Inner() {}
-		public void method() {System.out.println("A2Inner.method");}
-	}
-	
+    protected class A2Inner implements A1 {
+        public A2Inner() {
+        }
+
+        public void method() {
+            System.out.println("A2Inner.method");
+        }
+    }
+
 }

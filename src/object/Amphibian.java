@@ -1,28 +1,30 @@
 package object;
 
 public class Amphibian extends Frog {
-	
-	//ÕâÀïÊÇÖØĞÂ¶¨Òå»ùÀàFrogÖĞµÄmethodA·½·¨
+
+    //è¿™é‡Œæ˜¯é‡æ–°å®šä¹‰åŸºç±»Frogä¸­çš„methodAæ–¹æ³•
 //	public void methodA(Frog f) {
 //		System.out.println("Amphibian.methodA");
 //	}
-	
-	public static void main(String[] args) {
-		Amphibian amphibian = new Amphibian();
-		amphibian.methodA(amphibian);
-		/*
-		 * AmphibianÊÇFrogµÄµ¼³öÀà£¬FrogµÄ·½·¨½ÓÊÜµÄÊÇFrogÀàĞÍµÄ²ÎÊı
-		 * 	Amphibian¼Ì³ĞFrog£¬Ê¹ÓÃFrogµÄ·½·¨£¬µ«Êµ¼Ê´«ÈËµÄ²ÎÊıÊÇAmphibianÀàĞÍµÄ,±àÒëÆ÷Ã»ÓĞ±¨´í
-		 * 	AmphibianÒ²ÊÇFrogÀàĞÍµÄÒ»ÖÖ£¬½ÓÊÜÏòÉÏ×ªĞÍ
-		 */
-	}
+
+    public static void main(String[] args) {
+        Amphibian amphibian = new Amphibian();
+        amphibian.methodA(amphibian);
+        /*
+         * Amphibianæ˜¯Frogçš„å¯¼å‡ºç±»ï¼ŒFrogçš„æ–¹æ³•æ¥å—çš„æ˜¯Frogç±»å‹çš„å‚æ•°
+         * 	Amphibianç»§æ‰¿Frogï¼Œä½¿ç”¨Frogçš„æ–¹æ³•ï¼Œä½†å®é™…ä¼ äººçš„å‚æ•°æ˜¯Amphibianç±»å‹çš„,ç¼–è¯‘å™¨æ²¡æœ‰æŠ¥é”™
+         * 	Amphibianä¹Ÿæ˜¯Frogç±»å‹çš„ä¸€ç§ï¼Œæ¥å—å‘ä¸Šè½¬å‹
+         */
+    }
 
 }
+
 class Frog {
-	public void methodA(Frog f) {
-		System.out.println("Frog.methodA");
-	}
-	public void methodB(Frog f) {
-		System.out.println("Frog.methodB");
-	}
+    public void methodA(Frog f) {
+        System.out.println("Frog.methodA");
+    }
+
+    public void methodB(Frog f) {
+        System.out.println("Frog.methodB");
+    }
 }

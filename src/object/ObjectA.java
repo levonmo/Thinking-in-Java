@@ -1,8 +1,8 @@
 package object;
 
-//static¹Ø¼ü×Ö
+//staticå…³é”®å­—
 public class ObjectA {
 
-	public static int i = 47;
-	
+    public static int i = 47;
+
 }

@@ -1,35 +1,39 @@
 package object;
 
-//´´½¨Ò»¸öCycleÀà£¬Ëü¾ßÓĞÈı¸ö×ÓÀà¡£ÑİÊ¾Ã¿Ò»¸öÊµÀı¶¼¿ÉÒÔÓÉmethod()·½·¨ÏòÉÏ×ªĞÍ
+//åˆ›å»ºä¸€ä¸ªCycleç±»ï¼Œå®ƒå…·æœ‰ä¸‰ä¸ªå­ç±»ã€‚æ¼”ç¤ºæ¯ä¸€ä¸ªå®ä¾‹éƒ½å¯ä»¥ç”±method()æ–¹æ³•å‘ä¸Šè½¬å‹
 public class Cycle {
-	public void method(Cycle c) {
-		System.out.print("Cycle.method");
-		System.out.println("´«ÈË²ÎÊıµÄÀàĞÍÊÇ£º" + c.getClass().getName());//ÔËĞĞÕâÒ»ĞĞ´úÂë£¬µÈµ½µÄÀàÃû×Ö»¹ÊÇ´«ÈËµÄÀàĞÍ£¬µÈµ½µÄÀàĞÍ²¢Ã»ÓĞÏòÉÏ×ªĞÍ?
-	}
-	public static void main(String[] args) {
-		Unicycle unicycle = new Unicycle();
-		unicycle.method(unicycle);//Õâ¸ö·½·¨´«ÈËµÄ²ÎÊıÊÇCycleÀàĞÍµÄ£¬µ«ÊÇÍ¬Ò²¿ÉÒÔ½ÓÊÜËüµÄµ¼³öÀà
-		Bicycle bicycle = new Bicycle();
-		bicycle.method(bicycle);
-		Tricycle tricycle = new Tricycle();
-		tricycle.method(tricycle);
-	}
+    public void method(Cycle c) {
+        System.out.print("Cycle.method");
+        System.out.println("ä¼ äººå‚æ•°çš„ç±»å‹æ˜¯ï¼š" + c.getClass().getName());//è¿è¡Œè¿™ä¸€è¡Œä»£ç ï¼Œç­‰åˆ°çš„ç±»åå­—è¿˜æ˜¯ä¼ äººçš„ç±»å‹ï¼Œç­‰åˆ°çš„ç±»å‹å¹¶æ²¡æœ‰å‘ä¸Šè½¬å‹?
+    }
+
+    public static void main(String[] args) {
+        Unicycle unicycle = new Unicycle();
+        unicycle.method(unicycle);//è¿™ä¸ªæ–¹æ³•ä¼ äººçš„å‚æ•°æ˜¯Cycleç±»å‹çš„ï¼Œä½†æ˜¯åŒä¹Ÿå¯ä»¥æ¥å—å®ƒçš„å¯¼å‡ºç±»
+        Bicycle bicycle = new Bicycle();
+        bicycle.method(bicycle);
+        Tricycle tricycle = new Tricycle();
+        tricycle.method(tricycle);
+    }
 }
+
 class Unicycle extends Cycle {
-	public void method(Cycle c) {
-		System.out.print("Unicycle.method");
-		System.out.println("´«ÈË²ÎÊıµÄÀàĞÍÊÇ£º" + c.getClass().getName());
-	}
+    public void method(Cycle c) {
+        System.out.print("Unicycle.method");
+        System.out.println("ä¼ äººå‚æ•°çš„ç±»å‹æ˜¯ï¼š" + c.getClass().getName());
+    }
 }
+
 class Bicycle extends Cycle {
-	public void method(Cycle c) {
-		System.out.print("Bicycle.method");
-		System.out.println("´«ÈË²ÎÊıµÄÀàĞÍÊÇ£º" + c.getClass().getName());
-	}
+    public void method(Cycle c) {
+        System.out.print("Bicycle.method");
+        System.out.println("ä¼ äººå‚æ•°çš„ç±»å‹æ˜¯ï¼š" + c.getClass().getName());
+    }
 }
+
 class Tricycle extends Cycle {
-	public void method(Cycle c) {
-		System.out.print("Tricycle.method");
-		System.out.println("´«ÈË²ÎÊıµÄÀàĞÍÊÇ£º" + c.getClass().getName());
-	}
+    public void method(Cycle c) {
+        System.out.print("Tricycle.method");
+        System.out.println("ä¼ äººå‚æ•°çš„ç±»å‹æ˜¯ï¼š" + c.getClass().getName());
+    }
 }
